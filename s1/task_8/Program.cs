@@ -10,4 +10,4 @@ int m = int.Parse(Console.ReadLine());
 System.Console.WriteLine();
 System.Console.WriteLine($"Все чётные числа из диапазона от 1 до {m} включительно: ");
 
-for (int i = 2; i <= m; i = i + 2) Console.Write($"{i} ");
+for (int i = 2; i <= m; i += 2) Console.Write($"{i} ");

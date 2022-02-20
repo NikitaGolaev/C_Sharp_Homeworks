@@ -7,25 +7,15 @@ int[] arr = new int[10];
 void fillingMethod(int[] argument)
 {
     int length = argument.Length;
-    int i = 0;
 
-    while (i < length)
-    {
-        argument[i] = new Random().Next(0, 100);
-        i++;
-    }
+    for (int i = 0; i < length; i++) argument[i] = new Random().Next(0, 100);
 }
 
 void printMethod(int[] argument)
 {
     int length = argument.Length;
-    int i = 0;
 
-    while (i < length)
-    {
-        System.Console.Write($"{argument[i]} ");
-        i++;
-    }
+    for (int i = 0; i < length; i++) System.Console.Write($"{argument[i]} ");
     System.Console.WriteLine();
 }
 
@@ -36,15 +26,13 @@ printMethod(arr);
 void oddMethod(int[] argument)
 {
     int length = argument.Length;
-    int i = 0;
     int sum = 0;
 
-    while (i < length)
+    for (int i = 0; i < length; i++)
     {
-        if (argument[i] % 2 != 0)
-            sum = argument[i] + sum;
-        i++;
+        if (argument[i] % 2 != 0) sum = argument[i] + sum;
     }
+    
     System.Console.WriteLine($"Сумма нечётных чисел массива: {sum}");
 }
 

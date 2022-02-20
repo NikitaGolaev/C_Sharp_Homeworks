@@ -5,48 +5,31 @@ Console.Clear();
 void fillingMethod(int[] argument)
 {
     int length = argument.Length;
-    int i = 0;
 
-    while (i < length)
-    {
-        argument[i] = new Random().Next(100, 1000);
-        i++;
-    }
+    for (int i = 0; i < length; i++) argument[i] = new Random().Next(100, 1000);
 }
 
 void printMethod(int[] argument)
 {
     int length = argument.Length;
-    int i = 0;
 
-    while (i < length)
-    {
-        System.Console.Write($"{argument[i]} ");
-        i++;
-    }
+    for (int i = 0; i < length; i++) System.Console.Write($"{argument[i]} ");
     System.Console.WriteLine();
 }
 
 void reverseNegativeArrayMethod(int[] argument)
 {
     int length = argument.Length;
-    int i = 0;
 
-    while (i < length)
-    {
-        argument[i] = -argument[i];
-        //System.Console.Write($"{argument[i]} ");
-        i++;
-    }
+    for (int i = 0; i < length; i++) argument[i] = -argument[i];
 }
 
-//int[] arr = { 1, 4, 9, 8, 3 };
-int[] arr2 = new int[8];
+int[] arr = new int[8];
 
-fillingMethod(arr2);
+fillingMethod(arr);
 
-printMethod(arr2);
+printMethod(arr);
 
-reverseNegativeArrayMethod(arr2);
+reverseNegativeArrayMethod(arr);
 
-printMethod(arr2);
+printMethod(arr);

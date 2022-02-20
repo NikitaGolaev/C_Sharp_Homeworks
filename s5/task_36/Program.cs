@@ -5,25 +5,15 @@ Console.Clear();
 void fillingMethod(int[] argument)
 {
     int length = argument.Length;
-    int i = 0;
 
-    while (i < length)
-    {
-        argument[i] = new Random().Next(100, 1000);
-        i++;
-    }
+    for (int i = 0; i < length; i++) argument[i] = new Random().Next(100, 1000);
 }
 
 void printMethod(int[] argument)
 {
     int length = argument.Length;
-    int i = 0;
 
-    while (i < length)
-    {
-        System.Console.Write($"{argument[i]} ");
-        i++;
-    }
+    for (int i = 0; i < length; i++) System.Console.Write($"{argument[i]} ");
     System.Console.WriteLine();
 }
 
@@ -36,20 +26,18 @@ printMethod(arr);
 void evenOddMethod(int[] argument)
 {
     int length = argument.Length;
-    int i = 0;
-    int i1 = 0;
-    int i2 = 0;
+    int even = 0;
+    int odd = 0;
 
-    while (i < length)
+    for (int i = 0; i < length; i++)
     {
-        if (argument[i] % 2 == 0) i1++;
+        if (argument[i] % 2 == 0) even++;
 
-        else i2++;
-        
-        i++;
+        else odd++;
     }
-    System.Console.WriteLine($"Чётных: {i1}");
-    System.Console.WriteLine($"Нечётных: {i2}");
+    
+    System.Console.WriteLine($"Чётных элементов массива: {even}");
+    System.Console.WriteLine($"Нечётных элементов массива: {odd}");
 }
 
 evenOddMethod(arr);

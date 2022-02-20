@@ -22,6 +22,7 @@ void printMethod(int[] argument)
         System.Console.Write($"{argument[i]} ");
         i++;
     }
+    System.Console.WriteLine();
 }
 
 int[] array = new int[8];

@@ -4,16 +4,12 @@ Console.Clear();
 
 void fillingMethod(int[] argument)
 {
-    int length = argument.Length;
-
-    for (int i = 0; i < length; i++) argument[i] = new Random().Next(100, 1000);
+    for (int i = 0; i < argument.Length; i++) argument[i] = new Random().Next(100, 1000);
 }
 
 void printMethod(int[] argument)
 {
-    int length = argument.Length;
-
-    for (int i = 0; i < length; i++) System.Console.Write($"{argument[i]} ");
+    for (int i = 0; i < argument.Length; i++) System.Console.Write($"{argument[i]} ");
     System.Console.WriteLine();
 }
 
@@ -25,14 +21,13 @@ printMethod(arr);
 
 void evenOddMethod(int[] argument)
 {
-    int length = argument.Length;
     int even = 0;
     int odd = 0;
 
-    for (int i = 0; i < length; i++)
+    for (int i = 0; i < argument.Length; i++)
     {
         if (argument[i] % 2 == 0) even++;
-
+        
         else odd++;
     }
     

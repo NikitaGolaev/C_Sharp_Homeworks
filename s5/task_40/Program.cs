@@ -4,16 +4,12 @@ Console.Clear();
 
 void fillingMethod(int[] argument)
 {
-    int length = argument.Length;
-
-    for (int i = 0; i < length; i++) argument[i] = new Random().Next(0, 100);
+    for (int i = 0; i < argument.Length; i++) argument[i] = new Random().Next(0, 100);
 }
 
 void printMethod(int[] argument)
 {
-    int length = argument.Length;
-
-    for (int i = 0; i < length; i++) System.Console.Write($"{argument[i]} ");
+    for (int i = 0; i < argument.Length; i++) System.Console.Write($"{argument[i]} ");
     System.Console.WriteLine();
 }
 
@@ -25,20 +21,19 @@ printMethod(arr);
 
 void minMaxDiff(int[] argument)
 {
-    int length = argument.Length;
     int i = 0;
     int max = argument[i];
     int min = argument[i];
     
-    for (i = 0; i < length; i++)
+    for (i = 0; i < argument.Length; i++)
     {
         if (argument[i] > max) max = argument[i];
 
         else if (argument[i] < min) min = argument[i];
     }
 
-    System.Console.WriteLine($"Максимальный элемент: {max}");
-    System.Console.WriteLine($"Минимальный элемент: {min}");
+    System.Console.WriteLine($"Максимальный элемент массива: {max}");
+    System.Console.WriteLine($"Минимальный элемент массива: {min}");
     System.Console.WriteLine($"Разница между максимальным и минимальным элементами массива: {max - min}");
 }
 

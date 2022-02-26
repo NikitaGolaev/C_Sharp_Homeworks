@@ -2,24 +2,12 @@
 
 Console.Clear();
 
-System.Console.WriteLine("Введите число 'A': ");
+System.Console.Write("Введите число 'A': ");
 int a = int.Parse(Console.ReadLine());
-System.Console.WriteLine("Введите число 'B', которое будет степенью числа 'A': ");
+System.Console.Write("Введите число 'B', которое будет степенью числа 'A': ");
 int b = int.Parse(Console.ReadLine());
 
-int num = a;
+int a2 = a;
 
-for (int count = 1; count < b; count++) a = a * num;
-System.Console.WriteLine(a);
-
-
-// ---------------------------------------------------------------------------------->
-// int count = 1;
-
-// while (count < b)
-// {
-//     a = a * num;
-//     count++;
-// }
-
-// System.Console.WriteLine(a);
+for (int i = 1; i < b; i++) { a2 = a2 * a; }
+System.Console.WriteLine($"Число {a} в степени {b} равно: {a2}.");

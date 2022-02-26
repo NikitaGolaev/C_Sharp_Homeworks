@@ -3,25 +3,16 @@
 Console.Clear();
 
 System.Console.Write("Введите число: ");
-int num = int.Parse(Console.ReadLine());
+string num = Console.ReadLine();
 
-int i = 1;
-int numDuplicate = num;
-
-while (num > 10)
-{
-    i++;
-    //System.Console.Write($"{i} ");
-    num = num / 10;    
-}
-
+int length = num.Length;
+int copyNum = int.Parse(num);
 int sum = 0;
-num = numDuplicate;
 
-while (i != 0)
+for (int i = 0; i < length; i++)
 {
-    sum = num % 10 + sum;
-    num = num / 10;
-    i--;    
+    sum = sum + (copyNum % 10);
+    copyNum = copyNum / 10;
 }
-System.Console.WriteLine($"Сумма цифр в числе {numDuplicate} равна: {sum}");
+
+System.Console.WriteLine($"Сумма цифр в числе: {sum}");

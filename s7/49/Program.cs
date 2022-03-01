@@ -19,7 +19,7 @@ void FillingMethod(double[,] argument)
         for (int j = 0; j < argument.GetLength(1); j++)
         {
             // argument[i, j] = new Random().Next(1, 10);
-            argument[i, j] = new Random().NextDouble(); // Получаются слишком сложные числа. Что можно с этим сделать?
+            argument[i, j] = new Random().NextDouble() * 1000; // Получаются слишком сложные числа. Что можно с этим сделать?
         }
     }
 }
